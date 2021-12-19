@@ -1,4 +1,5 @@
 require_relative "../../services/answers/ddg_instant_answers"
+require_relative "../../services/answers/time_telling"
 
 module Utils
   module Macros
@@ -15,6 +16,8 @@ module Utils
       case macro
       when "!search"
         return Answers::DDGInstantAnswers.execute(user_content)
+      when "!time"
+        return Answers::TimeTelling.execute
       end
       ""
     end
