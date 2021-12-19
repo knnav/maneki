@@ -1,0 +1,9 @@
+greetings:
+  - "Hey there! I'm your assistant"
+  - "Sup chief, what do you need?"
+  - "Ahoy captain! what do you need me for?"
+byes:
+  - "See you soon!"
+  - "Hasta la vista, like the Terminator told ya"
+  - "Farewell!"
+ddg_search: "According to DuckDuckGo, this is what i found about "
