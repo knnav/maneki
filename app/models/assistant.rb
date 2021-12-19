@@ -2,10 +2,13 @@
 # think of it as the assistant's "Fat model"
 
 require_relative "conversation/answer"
-require_relative "../services/duckduckgo/instant_answers"
+
 require_relative "../../config/dialogs"
+require_relative "utils/macros"
 
 class Assistant
+  include Utils::Macros
+
   def initialize(name)
     @name = name
   end
@@ -15,15 +18,9 @@ class Assistant
   end
 
   def process_input(input)
-    say("#{Dialogs.dialogs['ddg_search']}#{input}\n#{prettyfied_answer(duckduckgo_search(input))}") 
-  end
-
-  def duckduckgo_search(query)
-    DuckDuckGo::InstantAnswers.execute(query)
-  end
-
-  def prettyfied_answer(answer)
-    "o==============================o\n\"#{answer}\"\no==============================o"
+    if input_is_macro?(input)
+      say(parse_macro(input))
+    end
   end
 
   def say_bye
