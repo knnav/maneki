@@ -15,11 +15,13 @@ module Answers
     end
 
     def result
-      "#{Dialogs.dialogs['ddg_search']}#{query}\n#{prettyfied_answer(duckduckgo_search(query))}"
+      return "" if duckduckgo_search.empty?
+
+      "#{Dialogs.dialogs['ddg_search']}#{query}\n#{prettyfied_answer(duckduckgo_search)}"
     end
 
-    def duckduckgo_search(query)
-      DuckDuckGo::InstantAnswers.execute(query)
+    def duckduckgo_search
+      @duckduckgo_search ||= DuckDuckGo::InstantAnswers.execute(query)
     end
 
     private

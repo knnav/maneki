@@ -16,7 +16,7 @@ module DuckDuckGo
       return JSON.parse(response.body)["AbstractText"] unless response.body.nil?
       raise if JSON.parse(response.body)["AbstractText"].nil?
     rescue => e
-      "No puedo encontrar resultados para \"#{query}\", lo siento..."
+      ""
     end
 
     def target_url
