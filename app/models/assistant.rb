@@ -3,6 +3,7 @@
 
 require_relative "conversation/answer"
 require_relative "../../config/dialogs"
+require_relative "utils/banners"
 require_relative "utils/macros"
 
 class Assistant
@@ -14,6 +15,10 @@ class Assistant
 
   def say(message)
     Answer.show(name, message)
+  end
+
+  def show_banner
+    puts Utils::Banners.available_banners.sample
   end
 
   def process_input(input)
