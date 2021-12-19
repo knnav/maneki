@@ -15,7 +15,7 @@ module Utils
       macro = partitioned_input.first
       user_content = partitioned_input.last
       case macro
-      when "!search"
+      when /!(s|search)/
         results = Answers::DDGInstantAnswers.execute(user_content)
         return results unless results.empty?
         if Answers::OpenBrowser.execute(user_content)
