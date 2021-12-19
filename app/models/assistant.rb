@@ -2,7 +2,6 @@
 # think of it as the assistant's "Fat model"
 
 require_relative "conversation/answer"
-
 require_relative "../../config/dialogs"
 require_relative "utils/macros"
 

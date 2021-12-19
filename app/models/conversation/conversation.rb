@@ -5,6 +5,7 @@
 
 require_relative 'user'
 require_relative '../assistant'
+require_relative "../../../config/dialogs"
 
 class Conversation
   def initialize(settings)
@@ -26,9 +27,7 @@ class Conversation
   end
 
   def start_loop
-    first_msg = "Hey there"
-
-    assistant.say(first_msg)
+    assistant.say(Dialogs.dialogs['greetings'].sample)
 
     input = user.get_input
 
