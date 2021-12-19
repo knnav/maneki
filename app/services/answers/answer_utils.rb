@@ -1,5 +1,9 @@
 module AnswerUtils
   def prettyfied_answer(answer)
-    "o==============================o\n\"#{answer}\"\no==============================o"
+    "#{separator}\n\"#{answer}\"\n#{separator}"
+  end
+
+  def separator
+    "*==============================*"
   end
 end

@@ -3,16 +3,8 @@
 
 require_relative "app/models/conversation/conversation"
 require_relative "config/config"
+require_relative "app/models/utils/banners"
 
 settings = Config.settings # this initializes configuration fot the app, maybe i should move this somewhere else...
-banner = <<-'EOF'
-    /\_____/\
-   /  o   o  \
-  ( ==  ^  == )
-   )         (
-  (           )
- ( (  )   (  ) )
-(__(__)___(__)__)
-EOF
-puts banner
+puts Utils::Banners.available_banners.sample
 Conversation.start(settings)
