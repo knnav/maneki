@@ -1,0 +1,6 @@
+bot_name: 'Maneki'
+user_name: 'Kurt'
+conversation:
+  exit_directives:
+    - exit
+    - quit
