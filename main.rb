@@ -1,9 +1,8 @@
 # Virtual assistant program, made by knnav
 # todo: make this less hacky an not a script
-require_relative 'src/response'
-def main
-  puts "Hola Kurt! soy la primera version de tu asistente virtual,\n por ahora no puedo hacer mucho pero pronto podras preguntarme muchas cosas!"
-  Response.new("Test name", "Test response message").print
-end
 
-main
+require_relative "app/models/conversation/conversation"
+require_relative "config/config"
+
+settings = Config.settings # this initializes configuration fot the app, maybe i should move this somewhere else...
+Conversation.start(settings)
