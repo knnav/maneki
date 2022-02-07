@@ -1,6 +1,7 @@
 require_relative "../../services/answers/ddg_instant_answers"
 require_relative "../../services/answers/open_browser"
 require_relative "../../services/answers/time_telling"
+require_relative "../../services/answers/hn_stories"
 
 module Utils
   module Macros
@@ -23,6 +24,8 @@ module Utils
         end
       when "!time"
         return Answers::TimeTelling.execute
+      when "!hackernews"
+        return Answers::HNStories.execute
       end
       ""
     end
