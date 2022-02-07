@@ -1,6 +1,8 @@
 # Maneki
 A command line digital assistant born form a night of insomnia!
-![image](https://user-images.githubusercontent.com/23566037/152717563-363fa646-abb8-4729-a6f9-d1bd6daa9844.png)
+
+![image](https://user-images.githubusercontent.com/23566037/152717683-83de1fda-77d6-4db7-bb65-4c911b68aa76.png)
+
 ### What does it do?
 Currently, Maneki can:
 - Search a term using Duckduckgo's instant answers without habing to go on the browser (Maneki will open a browser window with the search in case it doesn't find it on instant answers)
