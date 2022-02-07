@@ -1,5 +1,6 @@
 # Maneki
 A command line digital assistant born form a night of insomnia!
+![image](https://user-images.githubusercontent.com/23566037/152717563-363fa646-abb8-4729-a6f9-d1bd6daa9844.png)
 ### What does it do?
 Currently, Maneki can:
 - Search a term using Duckduckgo's instant answers without habing to go on the browser (Maneki will open a browser window with the search in case it doesn't find it on instant answers)
@@ -22,4 +23,5 @@ Maneki accepts a growing set of macros that invoke its different services:
 
 #### TO DO:
 - Add tests for everything (and rspec for that matter!)
+- Make maneki executable outside its folder
 - More dumb features! more dumb features!
