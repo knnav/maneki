@@ -42,7 +42,6 @@ class Conversation
 
   def conversation_loop(input)
     assistant.process_input(input)
-    assistant.show_banner
     assistant.say("Need anything else?")
   end
 
